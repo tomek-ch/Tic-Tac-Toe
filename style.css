@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --current: orange;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    place-content: center;
+    background: black;
+    font-family: Comfortaa;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background: var(--current);
+    grid-column: 2/3;
+    height: fit-content;
+    width: fit-content;
+    place-self: center;
+}
+div {
+    background: black;
+    font-size: 5em;
+    display: grid;
+    place-content: center;
+    cursor: default;
+}
+div:hover {
+    content: 'x'
+}
+input {
+    background: black;
+    border: none;
+    outline: none;
+    font-family: Comfortaa;
+    text-align: center;
+}
+#p1 {
+    color: orange;
+}
+#p2 {
+    color: skyblue;
+}
+section {
+    display: flex;
+    place-items: center;
+}
+#p1, #p2 {
+    font-size: 1.5em;
+    display: grid;
+    place-content: center;
+}
+#p1score {
+    color: orange;
+    font-size: 1.5em;
+}
+#p2score {
+    color: skyblue;
+    font-size: 1.5em;
+}
+#message {
+    font-size: 2.5em;
+    color: var(--current);
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+#replay {
+    grid-column: 2/3;
+    color: white;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    display: none;
+}
